@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilosAs.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&family=Roboto&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-size">
+        <nav class="nav-icons-exit">
+            <div>
+                <a href=""><img src="img/retroceder.png" class="back-img" alt="imagen-retroceso"></a>
+            </div>
+            <div class="progress-bar">
+                <div class="progreso1" id="progreso">
+
+                </div>
+                <div class="circle active">
+                    Entrada
+                </div>
+                <div class="circle">
+                    Asiento
+                </div>
+                <div class="circle">
+                    Pago
+                </div>
+            </div>
+            <div>
+                <img src="img/salida.png" alt="boton-salida" class="back-img">
+            </div>
+
+        </nav>
+    </header>
+    <div class="dflex">
+        <div id="bordeado">
+            <img class="imagenpeli" src="img/imgeli.jfif" alt="">
+            Huerfana el origen
+
+            <span id="txtdisponibilidad">Disponible en 2D,3D,4D</span>
+            <hr>
+
+        </div>
+        <div id="sx" class="divTabla">
+
+            <div class="container-card">
+                <div class="card1">
+                    <span>Entrada General</span>
+                    <br>
+                    General
+                    <span>S/15</span>
+                    <br>
+                    <button class="button-entries1" onclick="clicked()">
+
+                    </button>
+                    <span id="cantidadentradas">0</span>
+                    <button class="button-entries2" onclick="clicked2()">
+
+                    </button>
+                </div>
+                <div class="card2">
+                    Beneficios
+                </div>
+
+            </div>
+            <div class="codes">
+                <label>Canjea tu codigo</label>&nbsp;
+                <br>
+
+                <input type="text" name="" id="coupon" placeholder="Ej. XXX334YYP">&nbsp;
+                <button id="coupon-button" onclick="buttonclicked()">canjear</button>
+                <div>Descuento:<span id="text-coupon"></span> </div>
+            </div>
+
+
+            <div class="txt-selected-entries">
+                &nbsp;&nbsp;&nbsp; Entradas seleccionadas <span id="cantidadj"></span>
+            </div>
+
+
+
+
+            <a href="Asientos.html"><button onclick="registrarUsuarios()" class="buy-button01" id="siguiente"> <span
+                        class="txt-buy">>Continuar</span> </button></a>
+
+
+
+
+        </div>
+    </div>
+    <form action="submit">
+        <input type='hidden' name='seleccionImagen' value='' />
+    </form>
+    <p></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="js/alert.js"> </script>
+    <script src="js/registrar.js"> </script>
+
+</body>
+
+</html>

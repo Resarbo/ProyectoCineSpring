@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cinerama - Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">Cinerama</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/admin}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">Vista user</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container text-center">
+        <div>
+            <h1>Bienvenido a la administracion de Cinerama!</h1>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/generos}">Lista de Generos</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/generos/nuevo}">Agregar Genero</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/clasificacion}">Lista de Clasificaciones</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/clasificacion/nuevo}">Agregar Clasificacion</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/peliculas}">Lista de peliculas</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/peliculas/nuevo}">Agregar peliculas</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/sedes}">Lista de sedes</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/sedes/nuevo}">Agregar sede</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/salas}">Lista de salas</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/salas/nueva}">Agregar salas</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/funciones}">Lista de funciones</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/funciones/nuevo}">Agregar funciones</a>
+        </div>
+        <div class="p-2">
+            <a class="h1" th:href="@{/usuarios}">Lista de usuarios</a>
+        </div>
+    </div>
+</body>
+
+</html>

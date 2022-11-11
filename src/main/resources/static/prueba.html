@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilosAs.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&family=Roboto&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-size">
+        <nav class="nav-icons-exit">
+            <div>
+                <a href=""><img src="img/retroceder.png" class="back-img" alt="imagen-retroceso"></a>
+            </div>
+            <div class="progress-bar">
+                <div class="progreso3" id="progreso">
+
+                </div>
+                <div class="circle">
+                    Entrada
+                </div>
+                <div class="circle">
+                    Asiento
+                </div>
+                <div class="circle active">
+                    Pago
+                </div>
+            </div>
+            <div>
+                <img src="img/salida.png" alt="boton-salida" class="back-img">
+            </div>
+
+        </nav>
+    </header>
+    <div class="dflex">
+        <div id="bordeado">
+            <img class="imagenpeli" src="img/imgeli.jfif" alt="">
+            Huerfana el origen
+
+            <span id="txtdisponibilidad">Disponible en 2D,3D,4D</span>
+            <hr>
+
+        </div>
+        <div id="sx" class="divTabla">
+            <div class="container-pay">
+                <h1>Detalle de compra</h1>
+
+                <h2>Entradas
+                </h2>
+                <span id="txtdesciptionpay" class="txt-description">4</span>
+                <br>
+                <h2>Asientos
+                </h2>
+                <span id="txtasientos" class="txt-description">A1,A2,A3,A4</span>
+                <div class="div-pay">
+                    <span class="txt-pay">TOTAL A PAGAR</span>
+                    <br>
+                    <span id="txtpay" class="txt-pay">s/20</span>
+                </div>
+
+            </div>
+
+
+
+
+
+            <form action="submit">
+                <div class="containerinput"><input type="radio" class="radiob" name="btn-pay"><input type="text"
+                        class="textpay" placeholder="targeta de credito"><br><br></div>
+                <div class="containerinput"><input type="radio" class="radiob" name="btn-pay"><input type="text"
+                        class="textpay" placeholder="Ingrese su billetera electronica"></div>
+
+            </form>
+
+
+            <a href="#"><button onclick="registrarUsuarios()" class="buy-button2" id="siguiente"> <span
+                        class="txt-buy">>Continuar</span> </button></a>
+            <a href="Asientos.html"><button class="buy-button2" id="anterior"> <span class="txt-buy">>Anterior</span>
+                </button></a>
+
+            <div class="terminos">
+                <input type="checkbox" class="radiob"> Aceptas los <a href="">Terminos y condiciones</a>
+            </div>
+
+        </div>
+    </div>
+    <form action="submit">
+        <input type='hidden' name='seleccionImagen' value='' />
+    </form>
+    <p></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="js/alert.js"> </script>
+    <script src="js/registrarAS.js"> </script>
+    <script src="js/compra.js"> </script>
+
+</body>
+
+</html>

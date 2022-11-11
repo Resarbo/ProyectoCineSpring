@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7a76b96ec6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/detalle1.css">
+    <link rel="stylesheet" href="../static/css/UHF.css">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <title>DETALLE</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="barra">
+            <div class="barra_content centrar">
+                <a href="index.html"><img class="barra_logo" src="Imagenes/EMPRESALOGO.png" alt="LogoEmpresa"></a>
+                <ul class="nav">
+                    <li><a href="pds.html" class="nav-link">Cartelera</a></li>
+                    <li><a href="ubicaciones.html" class="nav-link">Cines</a></li>
+                    <li><a href="quinde.html" class="nav-link">Peliculas</a></li>
+                    <li><a href="sobren.html" class="nav-link-f">Nosotros</a></li>
+                    <li class="user"><a href="login-html" class="nav-link-icon"><i class="fa-solid fa-user"></i>
+                            <ul class="subuser">
+                                <li><a href=""><span>Usuario</span></a></li>
+                                <li><a href="">Cerrar sesion</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="registrar.html" class="nav-link-icon"><i class="fa-solid fa-phone"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <iframe id="video" th:src="${pelicula.link}" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 th:text="${pelicula.nombre}" class="titulo"></h3>
+                <div>
+                    <p class="genero" th:text="${pelicula.generoPelicula.nombre}"></p>
+                    <p class="duracion" th:text="${pelicula.duracion}"></p>
+                    <p class="clasificacion" th:text="${pelicula.clasificacion.nombre}"></p>
+                </div>
+                <th:block th:unless="${pelicula.id == null}" th:each="detalle,status : ${pelicula.detalles}">
+                    <input type="hidden" name="detalleID" th:value="${detalle.id}">
+                    <div class="descripcion">
+                        <p class="sinopsis" th:text="${detalle.sinopsis}"></p>
+                        <p class="director" th:text="${detalle.director}"></p>
+                        <p class="reparto" th:text="${detalle.reparto}"></p>
+                    </div>
+                </th:block>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_social">
+            <a href="register.html" class="nav-link-icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="register.html" class="nav-link-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="register.html" class="nav-link-icon"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="footer_sections container">
+            <a href="index.html"><img class="barra_logo" src="../static/Imagenes/EMPRESALOGO.png" alt="LogoEmpresa"></a>
+            <div class="footer_section">
+                <a href="#" class="footer_link">Privacidad</a>
+                <a href="#" class="footer_link">Medio de pago</a>
+                <a href="#" class="footer_link">Garantia</a>
+                <a href="#" class="footer_link">Politica</a>
+            </div>
+            <div class="footer_section">
+                <a href="#" class="footer_link">Privacidad</a>
+                <a href="#" class="footer_link">Medio de pago</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
